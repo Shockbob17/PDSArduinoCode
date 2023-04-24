@@ -13,8 +13,8 @@ ezButton: A library that is used to collect the limit switch values. <br>
 AccelStepper: A library that is used to control the stepper motors. <br>
 Adafruit_VL53L0X: A library for the time-of-flight sensor used. <br>
 
-It has several functions:
-Moveleft: A function to move it towards the next stack of trays. 
-Resetbutton: A function used to return the bar to a height of 0.
-Scan: A function used to move the bar upwards till the time of flight sensor detects there is no longer a tray in front of it. It will then return the z-height reached, which can be used to find the number of trays in a stack. 
+It has several functions:<br>
+Moveleft: A function to move it towards the next stack of trays. <br>
+Resetbutton: A function used to return the bar to a height of 0.<br>
+Scan: A function used to move the bar upwards till the time of flight sensor detects there is no longer a tray in front of it. It will then return the z-height reached, which can be used to find the number of trays in a stack. <br>
 Compiledreset: A function used to return the sensor to its origin position at the bottom right.	
