@@ -74,28 +74,6 @@ bot.command("hello", async (ctx) => {
 });
 
 
-bot.command("beginCount", async (ctx) => {
-  // Access Firestore to get data
-  await firestore.collection("users").doc("123").update(updateData)
-      .then(() => {
-        ctx.reply("Document successfully updated!");
-        ctx.reply("Use the variable to ping arduino!");
-      })
-      .catch((error) => {
-        ctx.reply("Error updating document: ", error);
-        console.log("Error updating document: ", error);
-      });
-});
-
-bot.command("count", async (ctx) => {
-  const snapshot = await firestore.collection("me").doc("12").get();
-  const data = snapshot.data();
-  ctx.reply(`Stack 1: ${data.stack1}!`);
-  ctx.reply(`Stack 2: ${data.stack2}!`);
-  ctx.reply(`Stack 3: ${data.stack3}!`);
-  ctx.reply(`Stack 4: ${data.stack4}!`);
-});
-
 exports.telegramBot = functions.https.onRequest((req, res) => {
   bot.handleUpdate(req.body);
   res.status(200).end();
