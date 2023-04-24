@@ -1,2 +1,3 @@
 # PDSArduinoCode
-## This is the arduino code used for the PDS by AMD group 6 in SUTD term 4
+This is the code that was developed for the arduino mega, MKR 1010 and telegram bot for SUTD DAI TERM 4 PDS project.
+
