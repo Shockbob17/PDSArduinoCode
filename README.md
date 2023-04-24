@@ -13,7 +13,7 @@ The code requires the following libraries: <br>
 <b>AccelStepper </b>: A library that is used to control the stepper motors. <br>
 <b>Adafruit_VL53L0X </b>: A library for the time-of-flight sensor used. <br>
 
-It has several functions:<br>
+The code has several functions:<br>
 <b>Moveleft </b>: A function to move it towards the next stack of trays. <br>
 <b>Resetbutton </b>: A function used to return the bar to a height of 0.<br>
 <b>Scan </b>: A function used to move the bar upwards till the time of flight sensor detects there is no longer a tray in front of it. It will then return the z-height reached, which can be used to find the number of trays in a stack. <br>
