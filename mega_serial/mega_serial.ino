@@ -229,8 +229,8 @@ void spin(){
 //
 //
 ////This code will load firebase connection
-////AFter done loading, constantly check the value
-////WHen there is a change in the value, triggers the scan command
+////After done loading, constantly check the value
+////When there is a change in the value, triggers the scan command
 ////When scanning, delay reading all values till the scan is complete
 //
 //void setup() {
