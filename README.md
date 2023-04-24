@@ -27,3 +27,23 @@ There functions would then be called during the main function, <b> omegasweeper 
 4. It will then divide the z-height returned with a constant for the height of an individual tray being scanned to find how many trays are in each stack. <br>
 5. Repeat steps 2-4 for each stack of trays. <br>
 6. The function will then format the number of trays in each stack into a proper string and send it to the MKR 1010 for it to upload to the firebase. <br>
+
+## Mkr_serial.ino
+This file is found inside the mkr_serial folder and is the ccode that is run on the mkr 1010.
+It is responsible for reading the values from the firebase and deciding if a signal should be sent to the mega to start a scan.
+
+The code requires the following libraries: <br>
+<b>Wifinina</b>: A library that is used for the mkr1010 and its wifi capabilities.<br>
+<b>Firebase Arduino Wifinina</b>: A library that is used to allow the wifinina to write to firebase. <br>
+
+The code has several functions:<br>
+<b>readcommandfirebase </b>: A function used to check if a value on the firebase has been updated and if it has, it will trigger the scan. <br>
+<b>writeinttofirebase </b>: A function used to update an integer to firebase. <br>
+<b>writestringtofirebase </b>: A function used to update a string to firebase.
+
+This is the main loop:
+1. Every second the mkr will scan the firebase for an updated
+2. If there is a update, activate the scan on the arduino mega and wait for a response from the mega.
+3. Once there is a response, it will decode the string response and use the values to update the firebase.
+
+## index.js
