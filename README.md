@@ -18,3 +18,11 @@ Moveleft: A function to move it towards the next stack of trays. <br>
 Resetbutton: A function used to return the bar to a height of 0.<br>
 Scan: A function used to move the bar upwards till the time of flight sensor detects there is no longer a tray in front of it. It will then return the z-height reached, which can be used to find the number of trays in a stack. <br>
 Compiledreset: A function used to return the sensor to its origin position at the bottom right.	
+
+There functions would then be called during the main function, omegasweeper: <br>
+1. It will call Compiledreset to ensure it is at the origin point. <br>
+2. It will run Scan for each stack of tray and then bring the scanner back to a z-height of 0 with the Resetbutton command. <br>
+3. It will use Moveleft to move to the next stack of trays. <br>
+4. It will then divide the z-height returned with a constant for the height of an individual tray being scanned to find how many trays are in each stack. <br>
+5. Repeat steps 2-4 for each stack of trays. <br>
+6. The function will then format the number of trays in each stack into a proper string and send it to the MKR 1010 for it to upload to the firebase. <br>
