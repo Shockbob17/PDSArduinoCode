@@ -47,3 +47,10 @@ This is the main loop:
 3. Once there is a response, it will decode the string response and use the values to update the firebase.
 
 ## index.js
+This is code with the functions for the telegram bot.
+
+These are the important functions:
+1. <b>start </b>: This function is fired whenever the telegram bot is started and will prompt the user to send the help command
+2. <b>help </b>: This function will tell the user how to use the bot and will inform them how the two main functions, realread and realtime work.
+3. <b>realtime </b>: This function will update the active boolean and will be used as the signal for the scan to start. After the scan, the updated values will be used to update the firebase
+4. <b>realread </b>: This function will be used to collect the count on the number of trays from the firebase and send the count to the user on telegram. 
